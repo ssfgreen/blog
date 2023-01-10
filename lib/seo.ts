@@ -2,7 +2,7 @@ import { createOgImage } from "./createOgImage";
 import type { DefaultSeoProps } from "next-seo";
 
 const title = `Sam Green`;
-const description = `Hi 👋 Welcome to my digital profile where I share what I'm learning in areas of Machine Learning, Full Stack Development, Design and Product.`;
+const description = `Welcome, here I share what I'm learning in areas of Machine Learning, Full Stack Development, Design and Product.`;
 const domain = `samsfgreen.com`;
 const twitter = `@samsfgreen`;
 const meta = `Machine Learning, Full Stack Dev, Design at Turinglab`;

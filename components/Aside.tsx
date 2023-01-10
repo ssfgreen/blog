@@ -21,7 +21,7 @@ export const Aside = ({
     >
       <div
         className={clsx("relative xl:absolute xl:top-0 xl:left-0 xl:right-0", {
-          "z-10 border-l-2 border-sky-200/5 bg-indigo-900 pl-4 shadow-[0_0_30px_20px] shadow-indigo-900 xl:border-t-2 xl:border-l-0 xl:py-6 xl:pl-0":
+          "z-10 border-l-2 border-sky-200/5 bg-navy-500 pl-4 shadow-[0_0_30px_20px] shadow-navy-500 xl:border-t-2 xl:border-l-0 xl:py-6 xl:pl-0":
             styled,
         })}
       >

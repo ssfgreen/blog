@@ -62,7 +62,7 @@ export default function Home({ posts }) {
   }
 
   return (
-    <div className="bg-[#020c1b] dark:bg-sky-100 antialiased selection:bg-green-500/90 selection:text-white">
+    <div className="dark:bg-navy-900 bg-sky-100 antialiased selection:bg-green-500/90 selection:text-white">
       <Layout showNav={showNav}>
         <div className="-mt-12 sm:mt-0">
           <div ref={intersectionRef}>

@@ -13,7 +13,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        gray: colors.stone,
+        navy: {
+          900: "#020c1b",
+          500: "#0a192f",
+          300: "#112240",
+          100: "#233554",
+        },
       },
       keyframes: ({ theme }) => ({
         mutation: {

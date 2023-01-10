@@ -14,3 +14,21 @@ At the base level, each blog will have a series of headings that are easy to acc
 ### Something Creative
 
 Something creative will follow
+
+<Aside styled>
+  Note: This post is not finished. I sometimes publish early in case it will be
+  helpful to someone.
+</Aside>
+
+```js showLineNumbers title="contentlayer.config.js" {4-5,9}
+import { defineDocumentType, makeSource } from "contentlayer/source-files";
+
+export const Post = defineDocumentType(() => ({
+  name: "Post",
+  contentType: "mdx",
+}));
+
+export default makeSource({
+  documentTypes: [Post],
+});
+```

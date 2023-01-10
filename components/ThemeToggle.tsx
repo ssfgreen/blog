@@ -6,7 +6,7 @@ export const ThemeToggle = () => {
 
   const handleChange = () => {
     console.log(theme);
-    setTheme(theme === "dark" ? "light" : "dark");
+    setTheme(theme === "light" ? "dark" : "light");
   };
 
   return (

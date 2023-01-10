@@ -19,11 +19,11 @@ const useThemeSwitcher = () => {
     if (theme === "dark") {
       localStorage.theme = "dark";
       document.documentElement.classList.add("dark");
-    } else {
+    }
+    if (theme === "light") {
       localStorage.theme = "light";
       document.documentElement.classList.remove("dark");
     }
-    console.log("new theme", localStorage.theme);
   }, [theme]);
 
   return [theme, setTheme];

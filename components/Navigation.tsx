@@ -1,5 +1,6 @@
 import { FOCUS_VISIBLE_OUTLINE } from "@/styles/constants";
 import TwitterIcon from "@/components/icons/TwitterIcon";
+import { ThemeToggle } from "./ThemeToggle";
 import { ChatBubbleBottomCenterTextIcon } from "@heroicons/react/24/solid";
 import cx from "clsx";
 import Link from "next/link";
@@ -36,6 +37,8 @@ export const Navigation = () => {
           <div>Twitter</div>
         </div>
       </a>
+
+      <ThemeToggle />
     </div>
   );
 };

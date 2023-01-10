@@ -9,10 +9,10 @@ export default function Document() {
         <link
           rel="preload"
           as="image"
-          href="https://res.cloudinary.com/samsfgreen/image/upload/v1673284167/bluegradient_ir7hrz.png"
+          href="https://res.cloudinary.com/samsfgreen/image/upload/v1673301885/curve_es93ov.png"
         />
       </Head>
-      <body className="bg-blue-900 antialiased selection:bg-blue-500/90 selection:text-white">
+      <body className="bg-[#020c1b] dark:bg-sky-100 antialiased selection:bg-green-500/90 selection:text-white">
         <Main />
         <NextScript />
       </body>

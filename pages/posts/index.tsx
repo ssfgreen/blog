@@ -38,7 +38,7 @@ export default function Home({ posts }) {
   let showNav = false;
 
   return (
-    <div className="dark:bg-navy-900 bg-sky-100 antialiased selection:bg-green-500/90 selection:text-white">
+    <div className="bg-navy-900 antialiased selection:bg-green-500/90 selection:text-white">
       <Layout showNav={showNav}>
         <div className="-mt-12 sm:mt-0">
           <div>

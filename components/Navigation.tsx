@@ -1,5 +1,6 @@
 import { FOCUS_VISIBLE_OUTLINE } from "@/styles/constants";
 import TwitterIcon from "@/components/icons/TwitterIcon";
+import GithubIcon from "@/components/icons/GithubIcon";
 import { ThemeToggle } from "./ThemeToggle";
 import {
   ChatBubbleBottomCenterTextIcon,
@@ -47,6 +48,8 @@ export const Navigation = ({ header = true }) => {
         <a
           className={cx("group", FOCUS_VISIBLE_OUTLINE)}
           href="https://twitter.com/samsfgreen"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <div className="sm:flex sm:items-center sm:space-x-2">
             <div className="mb-1.5 flex justify-center sm:mb-0 sm:block">
@@ -60,6 +63,8 @@ export const Navigation = ({ header = true }) => {
         <a
           className={cx("group", FOCUS_VISIBLE_OUTLINE)}
           href="https://www.linkedin.com/in/samsfgreen/"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <div className="sm:flex sm:items-center sm:space-x-2">
             <div className="mb-1.5 flex justify-center sm:mb-0 sm:block">
@@ -70,7 +75,22 @@ export const Navigation = ({ header = true }) => {
           </div>
         </a>
 
-        <ThemeToggle />
+        <a
+          className={cx("group", FOCUS_VISIBLE_OUTLINE)}
+          href="https://github.com/ssfgreen"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div className="sm:flex sm:items-center sm:space-x-2">
+            <div className="mb-1.5 flex justify-center sm:mb-0 sm:block">
+              <div className="rounded-lg p-1 transition-all duration-300 ease-out group-hover:scale-[1.2] group-hover:rounded-[10px] group-active:translate-y-1">
+                <GithubIcon className="w-[18px] transform text-sky-100 transition delay-100 duration-500 ease-out group-hover:scale-110" />
+              </div>
+            </div>
+          </div>
+        </a>
+
+        {/* <ThemeToggle /> */}
       </div>
     </div>
   );

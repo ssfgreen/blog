@@ -62,7 +62,7 @@ export default function Home({ posts }) {
   }
 
   return (
-    <div className="dark:bg-navy-900 bg-sky-100 antialiased selection:bg-green-500/90 selection:text-white">
+    <div className="dark:bg-navy-900 bg-sky-100 antialiased selection:bg-navy-500/90 selection:text-white">
       <Layout showNav={showNav}>
         <div className="-mt-12 sm:mt-0">
           <div ref={intersectionRef}>
@@ -76,10 +76,10 @@ export default function Home({ posts }) {
                 <ProfileImage size="large" />
 
                 <div>
-                  <h1 className="text-3xl font-medium text-sky-100/80 sm:text-4xl">
+                  <h1 className="text-3xl font-medium dark:text-sky-100/80 text-navy-900 sm:text-4xl">
                     Sam Green
                   </h1>
-                  <h2 className="align-middle text-lg leading-6 text-sky-100/50">
+                  <h2 className="align-middle text-lg leading-6 dark:text-sky-100/80 text-navy-900">
                     <span className="hidden sm:inline">
                       Machine Learning, Full Stack Dev, Design
                     </span>
@@ -102,7 +102,7 @@ export default function Home({ posts }) {
               </p>
 
               <div className="mt-8 sm:mt-12">
-                <Navigation />
+                <Navigation header={false} />
               </div>
             </div>
           </div>

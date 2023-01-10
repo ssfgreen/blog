@@ -11,6 +11,10 @@ const nextConfig = {
         hostname: "res.cloudinary.com",
         pathname: "/samsfgreen/**",
       },
+      {
+        protocol: "https",
+        hostname: "storage.googleapis.com",
+      },
     ],
   },
 };

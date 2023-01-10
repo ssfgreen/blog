@@ -6,12 +6,14 @@ import NextLink from "next/link";
 import React from "react";
 import { Aside } from "./Aside";
 import { Code } from "./Code";
+import { LinkPreview } from "./LinkPreview";
 
 export const components = {
   // Nested Component imports via MDX are suddenly not JSX transformed
   // https://github.com/contentlayerdev/contentlayer/issues/309
 
   //
+  LinkPreview,
   Code,
   Aside,
   h1: (props: any) => (

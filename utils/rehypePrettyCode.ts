@@ -5,7 +5,7 @@ import { visit } from "unist-util-visit";
 const BLOCK =
   "overflow-hidden rounded-lg bg-sky-100/5 shadow-surface-elevation-low ring-1 ring-sky-100/[3%] ring-inset";
 const TITLE =
-  "mb-0.5 rounded-md bg-sky-100/10 px-3 py-1 font-mono text-xs text-sky-100/70 shadow-sm";
+  "mb-0.5 rounded-t-md bg-sky-100/10 px-3 py-1 font-mono text-xs text-sky-100/70 shadow-sm";
 const PRE = "overflow-x-auto py-2 text-[13px] leading-6 [color-scheme:dark]";
 const CODE =
   "grid [&>span]:border-l-4 [&>span]:border-l-transparent [&>span]:pl-2 [&>span]:pr-3";

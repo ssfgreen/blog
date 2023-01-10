@@ -6,6 +6,12 @@ import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 
+import rehypePrettyCode from "rehype-pretty-code";
+import {
+  rehypePrettyCodeClasses,
+  rehypePrettyCodeOptions,
+} from "./utils/rehypePrettyCode";
+
 export default makeSource({
   contentDirPath: "content",
   documentTypes: [Post],
@@ -17,6 +23,8 @@ export default makeSource({
     remarkPlugins: [[remarkGfm]],
     rehypePlugins: [
       [rehypeSlug],
+      [rehypePrettyCode, rehypePrettyCodeOptions],
+      [rehypePrettyCodeClasses],
       [
         rehypeAutolinkHeadings,
         {

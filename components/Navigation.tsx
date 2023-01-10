@@ -8,52 +8,70 @@ import {
 import cx from "clsx";
 import Link from "next/link";
 import React from "react";
+import LinkedinIcon from "./icons/LinkedinIcon";
 
-export const Navigation = () => {
+export const Navigation = ({ header = true }) => {
   return (
-    <div className="flex items-center space-x-7 text-base font-semibold leading-none text-sky-100/90">
-      <Link href="/about" className={cx("group", FOCUS_VISIBLE_OUTLINE)}>
-        <div className="sm:flex sm:items-center sm:space-x-2">
-          <div className="mb-1.5 flex justify-center sm:mb-0 sm:block">
-            <div
-              className={
-                " transition-all duration-300 ease-out group-hover:scale-[1.2] group-active:translate-y-1"
-              }
-            >
-              About
+    <div className={cx("flex items-center", !header && "justify-between")}>
+      <div className="flex items-center space-x-7 text-base font-semibold leading-none text-sky-100/90">
+        <Link href="/about" className={cx("group", FOCUS_VISIBLE_OUTLINE)}>
+          <div className="sm:flex sm:items-center sm:space-x-2">
+            <div className="mb-1.5 flex justify-center sm:mb-0 sm:block">
+              <div
+                className={
+                  " transition-all duration-300 ease-out group-hover:scale-[1.2] group-active:translate-y-1"
+                }
+              >
+                About
+              </div>
             </div>
           </div>
-        </div>
-      </Link>
+        </Link>
 
-      <Link href="/blog" className={cx("group", FOCUS_VISIBLE_OUTLINE)}>
-        <div className="sm:flex sm:items-center sm:space-x-2">
-          <div className="mb-1.5 flex justify-center sm:mb-0 sm:block">
-            <div
-              className={
-                " transition-all duration-300 ease-out group-hover:scale-[1.2] group-active:translate-y-1"
-              }
-            >
-              Posts
+        <Link href="/blog" className={cx("group", FOCUS_VISIBLE_OUTLINE)}>
+          <div className="sm:flex sm:items-center sm:space-x-2">
+            <div className="mb-1.5 flex justify-center sm:mb-0 sm:block">
+              <div
+                className={
+                  " transition-all duration-300 ease-out group-hover:scale-[1.2] group-active:translate-y-1"
+                }
+              >
+                Posts
+              </div>
             </div>
           </div>
-        </div>
-      </Link>
+        </Link>
+      </div>
 
-      <a
-        className={cx("group", FOCUS_VISIBLE_OUTLINE)}
-        href="https://twitter.com/samsfgreen"
-      >
-        <div className="sm:flex sm:items-center sm:space-x-2">
-          <div className="mb-1.5 flex justify-center sm:mb-0 sm:block">
-            <div className="rounded-lg p-1 transition-all duration-300 ease-out group-hover:scale-[1.2] group-hover:rounded-[10px] group-active:translate-y-1">
-              <TwitterIcon className="w-[18px] transform text-sky-100 transition delay-100 duration-500 ease-out group-hover:scale-110" />
+      <div className="flex items-center ml-7 space-x-7 text-base font-semibold leading-none text-sky-100/90">
+        <a
+          className={cx("group", FOCUS_VISIBLE_OUTLINE)}
+          href="https://twitter.com/samsfgreen"
+        >
+          <div className="sm:flex sm:items-center sm:space-x-2">
+            <div className="mb-1.5 flex justify-center sm:mb-0 sm:block">
+              <div className="rounded-lg p-1 transition-all duration-300 ease-out group-hover:scale-[1.2] group-hover:rounded-[10px] group-active:translate-y-1">
+                <TwitterIcon className="w-[18px] transform text-sky-100 transition delay-100 duration-500 ease-out group-hover:scale-110" />
+              </div>
             </div>
           </div>
-        </div>
-      </a>
+        </a>
 
-      <ThemeToggle />
+        <a
+          className={cx("group", FOCUS_VISIBLE_OUTLINE)}
+          href="https://www.linkedin.com/in/samsfgreen/"
+        >
+          <div className="sm:flex sm:items-center sm:space-x-2">
+            <div className="mb-1.5 flex justify-center sm:mb-0 sm:block">
+              <div className="rounded-lg p-1 transition-all duration-300 ease-out group-hover:scale-[1.2] group-hover:rounded-[10px] group-active:translate-y-1">
+                <LinkedinIcon className="w-[18px] transform text-sky-100 transition delay-100 duration-500 ease-out group-hover:scale-110" />
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <ThemeToggle />
+      </div>
     </div>
   );
 };

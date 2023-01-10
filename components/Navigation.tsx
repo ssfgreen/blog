@@ -17,13 +17,12 @@ export const Navigation = () => {
           <div className="mb-1.5 flex justify-center sm:mb-0 sm:block">
             <div
               className={
-                "rounded-lg bg-gradient-to-tl from-blue-500/80 to-sky-400/80 p-1 shadow-lg transition-all duration-300 ease-out group-hover:scale-[1.2] group-hover:rounded-[10px] group-hover:shadow-blue-500/40 group-active:translate-y-1"
+                " transition-all duration-300 ease-out group-hover:scale-[1.2] group-active:translate-y-1"
               }
             >
-              <UserIcon className="w-[18px] transform text-sky-100 transition delay-100 duration-500 ease-out group-hover:scale-110" />
+              About
             </div>
           </div>
-          <div>About</div>
         </div>
       </Link>
 
@@ -32,13 +31,12 @@ export const Navigation = () => {
           <div className="mb-1.5 flex justify-center sm:mb-0 sm:block">
             <div
               className={
-                "rounded-lg bg-gradient-to-tl from-blue-500/80 to-sky-400/80 p-1 shadow-lg transition-all duration-300 ease-out group-hover:scale-[1.2] group-hover:rounded-[10px] group-hover:shadow-blue-500/40 group-active:translate-y-1"
+                " transition-all duration-300 ease-out group-hover:scale-[1.2] group-active:translate-y-1"
               }
             >
-              <ChatBubbleBottomCenterTextIcon className="w-[18px] transform text-sky-100 transition delay-100 duration-500 ease-out group-hover:scale-110" />
+              Posts
             </div>
           </div>
-          <div>Posts</div>
         </div>
       </Link>
 

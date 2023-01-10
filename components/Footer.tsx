@@ -30,6 +30,14 @@ export const Footer = () => {
             >
               GitHub
             </a>
+
+            <a
+              href="/pdfs/Sam Green CV.pdf"
+              target="_blank"
+              className={cx(LINK_SUBTLE_STYLES, FOCUS_VISIBLE_OUTLINE)}
+            >
+              CV
+            </a>
           </div>
         </div>
       </div>

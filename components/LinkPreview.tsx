@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import cx from "clsx";
 import { FOCUS_VISIBLE_OUTLINE } from "@/styles/constants";
-import Link from "next/link";
 
 const API = `/api/links/preview`;
 
@@ -13,8 +12,17 @@ async function getPreivewData(url: string) {
   return data;
 }
 
+interface PreviewData {
+  url: string;
+  title: string;
+  description: string;
+  images: string[];
+}
+
 export const LinkPreview = ({ url }: { url: string }) => {
-  const [data, setData] = useState({} as any);
+  const [data, setData] = useState<PreviewData | null>(null);
+
+  console.log("rul", url);
 
   useEffect(() => {
     getPreivewData(url).then((data) => setData(data));
@@ -24,7 +32,8 @@ export const LinkPreview = ({ url }: { url: string }) => {
     return null;
   }
 
-  console.log("preview data", data);
+  console.log("data", data);
+
   let domain = data.url.replace(/(https?:\/\/)?(www\.)?/, "");
   return (
     <a

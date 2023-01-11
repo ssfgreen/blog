@@ -2,17 +2,12 @@ import { FOCUS_VISIBLE_OUTLINE } from "@/styles/constants";
 import TwitterIcon from "@/components/icons/TwitterIcon";
 import GithubIcon from "@/components/icons/GithubIcon";
 import { useRouter } from "next/router";
-import { ThemeToggle } from "./ThemeToggle";
-import {
-  ChatBubbleBottomCenterTextIcon,
-  UserIcon,
-} from "@heroicons/react/24/solid";
 import cx from "clsx";
 import Link from "next/link";
-import React from "react";
+import { FC } from "react";
 import LinkedinIcon from "./icons/LinkedinIcon";
 
-const NavItem = ({ href, text }) => {
+const NavItem = ({ href, text }: { href: string; text: string }) => {
   const router = useRouter();
   const isActive = router.asPath === href;
 
@@ -34,7 +29,13 @@ const NavItem = ({ href, text }) => {
   );
 };
 
-const NavIcon = ({ href, Icon }) => {
+const NavIcon = ({
+  href,
+  Icon,
+}: {
+  href: string;
+  Icon: FC<{ className: string }>;
+}) => {
   return (
     <a
       className={cx("group", FOCUS_VISIBLE_OUTLINE)}

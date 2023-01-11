@@ -1,8 +1,8 @@
 import { useEnabledOnFirstIntersection } from "@/utils/useEnabledOnFirstIntersection";
 import { ContentLink } from "@/components/ContentLink";
-import type { select } from "../utils/select";
+import { formatPostPreview } from "@/utils/contentlayer";
 
-export const BlogPostPreview = (post: ReturnType<typeof select>) => {
+export const BlogPostPreview = (post: ReturnType<typeof formatPostPreview>) => {
   const { enabled, intersectionRef } = useEnabledOnFirstIntersection();
 
   return (

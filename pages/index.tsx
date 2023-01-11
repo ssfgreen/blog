@@ -5,29 +5,21 @@ import { ProfileImage } from "@/components/ProfileImage";
 import { Navigation } from "@/components/Navigation";
 import { Layout } from "@/components/Layout";
 import { seo } from "@/lib/seo";
-import { select } from "../utils/select";
 import { format, parseISO, compareDesc } from "date-fns";
 import { BlogPostPreview } from "@/components/BlogPostPreview";
 import React from "react";
 import { useIntersection } from "react-use";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
+import { formatPostPreview } from "@/utils/contentlayer";
 
 import { allPosts } from "contentlayer/generated";
 
 export const getStaticProps: GetStaticProps<{
-  posts: ReturnType<typeof select>[];
+  posts: ReturnType<typeof formatPostPreview>[];
 }> = async () => {
   let posts = allPosts
-    .map((post) =>
-      select(post, [
-        "title",
-        "slug",
-        "description",
-        "publishedAt",
-        "publishedAtFormatted",
-      ])
-    )
     // .filter((p) => p.status === "published")
+    .map(formatPostPreview)
     .sort((a, b) =>
       compareDesc(new Date(b.publishedAt), new Date(a.publishedAt))
     );

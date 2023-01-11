@@ -26,7 +26,7 @@ const useThemeSwitcher = () => {
     }
   }, [theme]);
 
-  return [theme, setTheme];
+  return [theme, setTheme] as const;
 };
 
 export default useThemeSwitcher;

@@ -7,6 +7,14 @@ import { components } from "@/components/MdxComponents";
 import { NextSeo } from "next-seo";
 import type { GetStaticProps, InferGetStaticPropsType } from "next";
 import { useRouter } from "next/router";
+import { formatPostPreview, getPartialPost } from "@/utils/contentlayer";
+
+interface HeadingType {
+  heading: number;
+  text: string;
+  slug: string;
+}
+[] ?? null;
 
 export const getStaticPaths = () => {
   return {
@@ -15,7 +23,9 @@ export const getStaticPaths = () => {
   };
 };
 
-export const getStaticProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps<{
+  post: ReturnType<typeof getPartialPost>;
+}> = async ({ params }) => {
   const post = allPosts.find((post) => post.slug === params?.slug);
 
   if (!post) {
@@ -26,7 +36,7 @@ export const getStaticProps = async ({ params }) => {
 
   return {
     props: {
-      post: post,
+      post: getPartialPost(post, allPosts),
     },
   };
 };
@@ -82,7 +92,7 @@ export default function PostPage({
               <div className="space-y-2 text-sm">
                 <div className="uppercase text-sky-100/30">On this page</div>
 
-                {post.headings.map((heading) => {
+                {post.headings.map((heading: HeadingType) => {
                   return (
                     <div key={heading.slug}>
                       <a

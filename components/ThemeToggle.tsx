@@ -5,7 +5,6 @@ export const ThemeToggle = () => {
   const [theme, setTheme] = useThemeSwitcher();
 
   const handleChange = () => {
-    console.log(theme);
     setTheme(theme === "light" ? "dark" : "light");
   };
 

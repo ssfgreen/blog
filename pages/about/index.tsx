@@ -1,5 +1,4 @@
 import { Layout } from "@/components/Layout";
-import EmojiSectionWrapper from "@/components/EmojiSectionWrapper";
 import React from "react";
 import { useIntersection } from "react-use";
 import cx from "clsx";
@@ -21,8 +20,8 @@ const ExtLink = ({ href, children }: { href: string; children: any }) => (
 export default function About() {
   return (
     <Layout>
-      <div className="flex flex-col py-auto px-auto space-y-4 my-10">
-        <EmojiSectionWrapper>
+      <div className="flex flex-col py-auto px-auto space-y-4 my-10 text-lg w-full">
+        <div className="flex flex-row space-x-4">
           <p>🚀</p>
           <p>
             I’m a{" "}
@@ -33,16 +32,16 @@ export default function About() {
             <ExtLink href="https://turinglab.co.uk">Turinglab</ExtLink> where I
             build products to make coding education more fun and effective.
           </p>
-        </EmojiSectionWrapper>
-        <EmojiSectionWrapper>
+        </div>
+        <div className="flex flex-row space-x-4">
           <p>⚡</p>
           <p>
             I{"'"}ve help bootstrap Turinglab to over £1m in revenue and teach
             over 125,000 kids to code across over 700,000 hours of learning,
             reaching up to 80,000 learners per month.
           </p>
-        </EmojiSectionWrapper>
-        <EmojiSectionWrapper>
+        </div>
+        <div className="flex flex-row space-x-4">
           <p>🤝</p>
           <p>
             I’ve managed projects at scale with clients such as
@@ -67,8 +66,8 @@ export default function About() {
             </ExtLink>{" "}
             and more.
           </p>
-        </EmojiSectionWrapper>
-        <EmojiSectionWrapper>
+        </div>
+        <div className="flex flex-row space-x-4">
           <p>👑</p>
           <p>
             I’ve even taught{" "}
@@ -76,8 +75,8 @@ export default function About() {
               Prince Charles (now King Charles III) and Camilla coding!
             </ExtLink>
           </p>
-        </EmojiSectionWrapper>
-        <EmojiSectionWrapper>
+        </div>
+        <div className="flex flex-row space-x-4">
           <p>🎓</p>
           <p>
             I met my cofounder while studying Computer Science at Imperial
@@ -94,8 +93,8 @@ export default function About() {
               .
             </ExtLink>
           </p>
-        </EmojiSectionWrapper>
-        <EmojiSectionWrapper>
+        </div>
+        <div className="flex flex-row space-x-4">
           <p>🤖</p>
           <p>
             After graduating I contracted briefly as a software engineer
@@ -105,8 +104,8 @@ export default function About() {
             </ExtLink>
             .
           </p>
-        </EmojiSectionWrapper>
-        <EmojiSectionWrapper>
+        </div>
+        <div className="flex flex-row space-x-4">
           <p>🐺</p>
           <p>
             I was an early employee at{" "}
@@ -116,8 +115,8 @@ export default function About() {
             where I worked on their Program Team. It was working at EF with
             technical founders that inspired me to study Computer Science.
           </p>
-        </EmojiSectionWrapper>
-        <EmojiSectionWrapper>
+        </div>
+        <div className="flex flex-row space-x-4">
           <p>🏡</p>
           <p>
             I started out as designer for
@@ -130,8 +129,8 @@ export default function About() {
             </ExtLink>{" "}
             working on several urban and architectural designs.
           </p>
-        </EmojiSectionWrapper>
-        <EmojiSectionWrapper>
+        </div>
+        <div className="flex flex-row space-x-4">
           <p>🎨</p>
           <p>
             I learned design studying architecture at{" "}
@@ -148,8 +147,8 @@ export default function About() {
             </ExtLink>
             , Spencer De Grey and as well as new, up and coming designers.
           </p>
-        </EmojiSectionWrapper>
-        <EmojiSectionWrapper>
+        </div>
+        <div className="flex flex-row space-x-4">
           <p>🏕</p>
           <p>
             If I{"'"}m not thinking about building impactful digital products
@@ -164,7 +163,7 @@ export default function About() {
             </ExtLink>
             .
           </p>
-        </EmojiSectionWrapper>
+        </div>
       </div>
     </Layout>
   );

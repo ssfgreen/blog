@@ -47,7 +47,7 @@ export const components = {
           className={clsx(LINK_STYLES, FOCUS_VISIBLE_OUTLINE)}
           href={href}
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           {...props}
         />
       );

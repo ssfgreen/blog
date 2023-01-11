@@ -14,12 +14,4 @@ This blog was built with the following tools:
 - [rehype-autolink-headings](https://github.com/rehypejs/rehype-autolink-headings) - A rehype plugin to automatically add links to headings
 - [rehype-pretty-code](https://rehype-pretty-code.netlify.app/) - A rehype plugin to prettify code blocks
 
-To Run:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+`npm run dev` to run, open [http://localhost:3000](http://localhost:3000) with your browser to see the result.

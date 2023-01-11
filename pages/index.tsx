@@ -4,19 +4,19 @@ import cx from "clsx";
 import { ProfileImage } from "@/components/ProfileImage";
 import { Navigation } from "@/components/Navigation";
 import { Layout } from "@/components/Layout";
-import Image from "next/image";
-import { Inter } from "@next/font/google";
-import styles from "../styles/Home.module.css";
 import { seo } from "@/lib/seo";
 import { select } from "../utils/select";
 import { format, parseISO, compareDesc } from "date-fns";
 import { BlogPostPreview } from "@/components/BlogPostPreview";
 import React from "react";
 import { useIntersection } from "react-use";
+import { GetStaticProps, InferGetStaticPropsType } from "next";
 
 import { allPosts } from "contentlayer/generated";
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps<{
+  posts: ReturnType<typeof select>[];
+}> = async () => {
   let posts = allPosts
     .map((post) =>
       select(post, [
@@ -34,22 +34,9 @@ export const getStaticProps = async () => {
   return { props: { posts } };
 };
 
-function PostCard(post) {
-  return (
-    <div className="mb-6">
-      <time dateTime={post.date} className="block text-sm text-slate-600">
-        {post.publishedAt}
-      </time>
-      <h2 className="text-lg">
-        <Link key={post.slug} href={`/blog/${post.slug}`}>
-          {post.title}
-        </Link>
-      </h2>
-    </div>
-  );
-}
-
-export default function Home({ posts }) {
+export default function Home({
+  posts,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
   const intersectionRef = React.useRef(null);
   const intersection = useIntersection(intersectionRef, {
     root: null,

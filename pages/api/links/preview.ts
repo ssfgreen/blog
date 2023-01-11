@@ -14,8 +14,6 @@ export default async function handler(
   res: NextApiResponse<Data>
 ) {
   const { url } = req.query;
-
-  console.log("request", req);
   const linkPreview = await getLinkPreview(url as string);
 
   res.status(200).json(linkPreview);

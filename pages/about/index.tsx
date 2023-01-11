@@ -13,7 +13,7 @@ import colors from "tailwindcss/colors";
 const ExtLink = ({ href, children }: { href: string; children: any }) => (
   <a target="_blank" rel="noopener noreferrer" href={href}>
     {" "}
-    {children}
+    <i>{children}</i>
   </a>
 );
 
@@ -25,7 +25,12 @@ export default function About() {
           <p>🚀</p>
           <p>
             I’m a{" "}
-            <RoughNotation type="underline" show={true} color={colors.sky[200]}>
+            <RoughNotation
+              type="underline"
+              show={true}
+              color={colors.sky[200]}
+              order={1}
+            >
               Co-founder
             </RoughNotation>{" "}
             and Head of Product at{" "}
@@ -36,9 +41,26 @@ export default function About() {
         <div className="flex flex-row space-x-4">
           <p>⚡</p>
           <p>
-            I{"'"}ve help bootstrap Turinglab to over £1m in revenue and teach
-            over 125,000 kids to code across over 700,000 hours of learning,
-            reaching up to 80,000 learners per month.
+            I{"'"}ve help bootstrap Turinglab to over
+            <RoughNotation
+              type="underline"
+              show={true}
+              color={colors.sky[200]}
+              order={2}
+            >
+              {` £1m in revenue `}
+            </RoughNotation>
+            and teach over
+            <RoughNotation
+              type="underline"
+              show={true}
+              color={colors.sky[200]}
+              order={3}
+            >
+              {` 125,000 kids to code `}
+            </RoughNotation>
+            across over 700,000 hours of learning, reaching up to 80,000
+            learners per month.
           </p>
         </div>
         <div className="flex flex-row space-x-4">
@@ -84,7 +106,7 @@ export default function About() {
             machine learning to my thesis{" "}
             <ExtLink href="/pdfs/Visualising Deep Neural Networks.pdf">
               <RoughNotation
-                type="highlight"
+                type="underline"
                 show={true}
                 color={colors.sky[200]}
               >
@@ -99,19 +121,14 @@ export default function About() {
           <p>
             After graduating I contracted briefly as a software engineer
             building products with Machine Learning for{" "}
-            <ExtLink href="https://www.proquoai.com/">
-              <i>TX.ai</i>
-            </ExtLink>
-            .
+            <ExtLink href="https://www.proquoai.com/">TX.ai</ExtLink>.
           </p>
         </div>
         <div className="flex flex-row space-x-4">
           <p>🐺</p>
           <p>
             I was an early employee at{" "}
-            <ExtLink href="https://www.joinef.com/">
-              <i>Entrepreneur First</i>
-            </ExtLink>{" "}
+            <ExtLink href="https://www.joinef.com/">Entrepreneur First</ExtLink>{" "}
             where I worked on their Program Team. It was working at EF with
             technical founders that inspired me to study Computer Science.
           </p>
@@ -121,11 +138,11 @@ export default function About() {
           <p>
             I started out as designer for
             <ExtLink href="https://www.urbansplash.co.uk/">
-              <i>Urban Splash</i>
+              Urban Splash
             </ExtLink>
             and later at{" "}
             <ExtLink href="https://www.alisonbrooksarchitects.com/">
-              <i>Alison Brooks Architects</i>
+              Alison Brooks Architects
             </ExtLink>{" "}
             working on several urban and architectural designs.
           </p>
@@ -133,13 +150,25 @@ export default function About() {
         <div className="flex flex-row space-x-4">
           <p>🎨</p>
           <p>
-            I learned design studying architecture at{" "}
+            I learned design studying architecture at
             <ExtLink href="https://www.arct.cam.ac.uk/">
-              University of Cambridge
+              <RoughNotation
+                type="underline"
+                show={true}
+                color={colors.sky[200]}
+              >
+                {` University of Cambridge `}
+              </RoughNotation>
             </ExtLink>
             where I studied Architecture and wrote my thesis exploring the
             <ExtLink href="/pdfs/Added Value of Quality Design.pdf">
-              Adding Value through Quality Design
+              <RoughNotation
+                type="underline"
+                show={true}
+                color={colors.sky[200]}
+              >
+                Adding Value through Quality Design
+              </RoughNotation>
             </ExtLink>
             . Here I also ran design lectures featuring industry giants such as
             <ExtLink href="https://www.youtube.com/watch?v=lTcIQ7Rd46w&ab_channel=CambridgeUnion">
@@ -155,7 +184,7 @@ export default function About() {
             then I{"'"}m trying to get outside. I{"'"}m a passionate climber and
             have climbed all over Europe. I{"'"}ve even helped a former
             <ExtLink href="https://www.instagram.com/captaincutloose/?hl=en">
-              <i>GB Climber</i>
+              GB Climber
             </ExtLink>{" "}
             develop a coaching manual and
             <ExtLink href="https://greenjosh.com/catalyst.html">

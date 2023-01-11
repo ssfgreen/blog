@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="en" className="scroll-p-24">
       <Head>
-        <link rel="icon" type="image/png" href="/assets/favicon.png?v=1" />
+        <link rel="icon" type="image/png" href="/favicon.ico" />
         <meta name="theme-color" content="#152D9E" />
         <link
           rel="preload"

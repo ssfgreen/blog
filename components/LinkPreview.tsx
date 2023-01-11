@@ -8,7 +8,6 @@ const API = `/api/links/preview`;
 async function getPreivewData(url: string) {
   const res = await fetch(API + `?url=${url}`);
   const data = await res.json();
-  console.log(data);
   return data;
 }
 
@@ -22,8 +21,6 @@ interface PreviewData {
 export const LinkPreview = ({ url }: { url: string }) => {
   const [data, setData] = useState<PreviewData | null>(null);
 
-  console.log("rul", url);
-
   useEffect(() => {
     getPreivewData(url).then((data) => setData(data));
   }, [url]);
@@ -31,8 +28,6 @@ export const LinkPreview = ({ url }: { url: string }) => {
   if (!data) {
     return null;
   }
-
-  console.log("data", data);
 
   let domain = data.url.replace(/(https?:\/\/)?(www\.)?/, "");
   return (

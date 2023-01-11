@@ -12,67 +12,8 @@ import { RoughNotation } from "react-rough-notation";
 import colors from "tailwindcss/colors";
 
 export default function About() {
-  const intersectionRef = React.useRef(null);
-  const intersection = useIntersection(intersectionRef, {
-    root: null,
-    rootMargin: "-100px",
-  });
-
-  let showNav = false;
-  if (intersection && !intersection.isIntersecting) {
-    showNav = true;
-  }
-
   return (
-    <Layout showNav={showNav}>
-      <div className="-mt-12 sm:mt-0">
-        <div ref={intersectionRef}>
-          <div
-            className={cx("transition duration-300", {
-              "opacity-0": showNav,
-              "opacity-100": !showNav,
-            })}
-          >
-            <div className="flex items-center space-x-6">
-              <Link
-                href="/"
-                title="View home page"
-                className={cx("rounded-full", FOCUS_VISIBLE_OUTLINE)}
-              >
-                <ProfileImage size="large" isInteractive />
-              </Link>
-
-              <div>
-                <h1 className="text-3xl font-medium text-sky-100/80 sm:text-4xl">
-                  Sam Green
-                </h1>
-                <h2 className="align-middle text-lg leading-6 text-sky-100/800">
-                  <span className="hidden sm:inline">
-                    Machine Learning, Full Stack Dev, Design
-                  </span>
-                  <span
-                    className="inline sm:hidden"
-                    title="Developer Experience"
-                  >
-                    ML, Dev, Design
-                  </span>{" "}
-                  at{" "}
-                  <span className="font-medium text-sky-100/70">Turinglab</span>
-                </h2>
-              </div>
-            </div>
-
-            <p className="mt-7 text-xl text-sky-100/90 sm:mt-9">
-              Let me tell you a little about my journey to where I am as an
-              engineer, designer and product manager.
-            </p>
-
-            <div className="mt-8 sm:mt-12">
-              <Navigation header={false} />
-            </div>
-          </div>
-        </div>
-      </div>
+    <Layout>
       <div className="flex flex-col py-auto px-auto space-y-4 my-10">
         <EmojiSectionWrapper>
           <p>🚀</p>

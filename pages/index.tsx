@@ -62,58 +62,54 @@ export default function Home({ posts }) {
   }
 
   return (
-    <div className="bg-navy-900 antialiased selection:bg-navy-500/90 selection:text-white">
-      <Layout showNav={showNav}>
-        <div className="-mt-12 sm:mt-0">
-          <div ref={intersectionRef}>
-            <div
-              className={cx("transition duration-300", {
-                "opacity-0": showNav,
-                "opacity-100": !showNav,
-              })}
-            >
-              <div className="flex items-center space-x-6">
-                <ProfileImage size="large" />
+    <Layout showNav={showNav}>
+      <div className="-mt-12 sm:mt-0">
+        <div ref={intersectionRef}>
+          <div
+            className={cx("transition duration-300", {
+              "opacity-0": showNav,
+              "opacity-100": !showNav,
+            })}
+          >
+            <div className="flex items-center space-x-6">
+              <ProfileImage size="large" />
 
-                <div>
-                  <h1 className="text-3xl font-medium text-sky-100/80 sm:text-4xl">
-                    Sam Green
-                  </h1>
-                  <h2 className="align-middle text-lg leading-6 text-sky-100/80">
-                    <span className="hidden sm:inline">
-                      Machine Learning, Full Stack Dev, Design
-                    </span>
-                    <span
-                      className="inline sm:hidden"
-                      title="Developer Experience"
-                    >
-                      ML, Dev, Design
-                    </span>{" "}
-                    at{" "}
-                    <span className="font-medium text-sky-100/70">
-                      Turinglab
-                    </span>
-                  </h2>
-                </div>
+              <div>
+                <h1 className="text-3xl font-medium text-sky-100/80 sm:text-4xl">
+                  Sam Green
+                </h1>
+                <h2 className="align-middle text-lg leading-6 text-sky-100/80">
+                  <span className="hidden sm:inline">
+                    Machine Learning, Full Stack Dev, Design
+                  </span>
+                  <span
+                    className="inline sm:hidden"
+                    title="Developer Experience"
+                  >
+                    ML, Dev, Design
+                  </span>{" "}
+                  at{" "}
+                  <span className="font-medium text-sky-100/70">Turinglab</span>
+                </h2>
               </div>
+            </div>
 
-              <p className="mt-7 text-xl text-sky-100/90 sm:mt-9">
-                {seo.description}
-              </p>
+            <p className="mt-7 text-xl text-sky-100/90 sm:mt-9">
+              {seo.description}
+            </p>
 
-              <div className="mt-8 sm:mt-12">
-                <Navigation header={false} />
-              </div>
+            <div className="mt-8 sm:mt-12">
+              <Navigation header={false} />
             </div>
           </div>
         </div>
+      </div>
 
-        <div className="space-y-10 mt-20 sm:mt-32">
-          {posts.map((post) => (
-            <BlogPostPreview key={post.slug} {...post} />
-          ))}
-        </div>
-      </Layout>
-    </div>
+      <div className="space-y-10 mt-20 sm:mt-32">
+        {posts.map((post) => (
+          <BlogPostPreview key={post.slug} {...post} />
+        ))}
+      </div>
+    </Layout>
   );
 }

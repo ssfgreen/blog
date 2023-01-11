@@ -12,7 +12,7 @@ export default function Document() {
           href="https://res.cloudinary.com/samsfgreen/image/upload/v1673301885/curve_es93ov.png"
         />
       </Head>
-      <body className="bg-navy-900 antialiased selection:bg-green-500/90 selection:text-white">
+      <body className="bg-gradient-to-tr from-slate-700 to-navy-900 antialiased selection:bg-green-500/90 selection:text-white">
         <Main />
         <NextScript />
       </body>

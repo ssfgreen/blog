@@ -3,19 +3,19 @@ import Image from "next/image";
 import cx from "clsx";
 import { FOCUS_VISIBLE_OUTLINE } from "@/styles/constants";
 
+interface PreviewData {
+  url: string;
+  title: string;
+  description: string;
+  images: string[];
+}
+
 const API = `/api/links/preview`;
 
 async function getPreivewData(url: string) {
   const res = await fetch(API + `?url=${url}`);
   const data = await res.json();
   return data;
-}
-
-interface PreviewData {
-  url: string;
-  title: string;
-  description: string;
-  images: string[];
 }
 
 export const LinkPreview = ({ url }: { url: string }) => {
@@ -40,9 +40,9 @@ export const LinkPreview = ({ url }: { url: string }) => {
         FOCUS_VISIBLE_OUTLINE
       )}
     >
-      <div className="flex-none w-32 h-32">
+      <div className="flex-none w-32 max-h-32">
         <Image
-          className="w-32 h-32 rounded"
+          className="w-32 max-h-32 rounded object-contain object-left-top"
           src={data.images[0]}
           priority={true}
           alt={data.title}

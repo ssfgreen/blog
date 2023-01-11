@@ -1,46 +1,106 @@
 ---
-title: "Hello World - A New Blog"
-description: "A new blog for a new year"
+title: "Hello World - Hello Blog"
+description: "A new year and a new blog"
 publishedAt: "2023-01-09"
-status: "draft"
+status: "published"
 ---
 
-This is an initall Hello World Blog post with some features I'm exploring for my blog
+This is the first post of my new blog.
 
-### Headings
+The aim is to write up what I'm learning while I build. I'm hoping that this will help me to learn more deeply and to share what I'm learning with others.
 
-At the base level, each blog will have a series of headings that are easy to access
+# This Blog
 
-### Something Creative
+This website / blog is made using a few technologies that I like - some I've used before and some are new to me.
 
-Something creative will follow
+## The big ones
 
-<Aside styled>
-  Note: This post is not finished. I sometimes publish early in case it will be
-  helpful to someone.
-</Aside>
+- [Next.js](https://nextjs.org/) - A [React](https://reactjs.org/) framework for building static and server-rendered applications
+- [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework for rapidly building custom designs
+- [MDX](https://mdxjs.com/) - A fileformat that allows you to write JSX in your markdown content - ideal for creating interactive blog posts
+- [Contentlayer](https://contentlayer.dev/) - A content SDK that validates and transforms content into type-safe JSON data
+- [Vercel](https://vercel.com/) - A platform for hosting static websites and serverless functions
+- [TypeScript](https://www.typescriptlang.org/) - A typed superset of JavaScript that compiles to plain JavaScript
 
-```js showLineNumbers title="contentlayer.config.js" {4-5,9}
-import { defineDocumentType, makeSource } from "contentlayer/source-files";
+## Some additional libraries
 
-export const Post = defineDocumentType(() => ({
-  name: "Post",
-  contentType: "mdx",
-}));
+- [heroicons](https://heroicons.com/) - A set of free MIT-licensed high-quality SVG icons for UI development
+- [clsx](https://github.com/lukeed/clsx) - A tiny (228B) utility for constructing `className` strings conditionally
+- [rough-notation](https://roughnotation.com/) - A library for creating and animating annotations on a web page
+- [rehype-autolink-headings](https://github.com/rehypejs/rehype-autolink-headings) - A rehype plugin to automatically add links to headings
+- [rehype-pretty-code](https://rehype-pretty-code.netlify.app/) - A rehype plugin to prettify code blocks
 
-export default makeSource({
-  documentTypes: [Post],
-});
-```
+# MDX Demonstration
 
-### Preview Component
+Just a quick demo of MDX.
 
-This is a component in MDX being rendered simply as
+## Aside
+
+I've included an 'Aside' in my markdown file:
 
 ```mdx
-<LinkPreview url="https://www.kaggle.com/competitions/titanic" />
+<Aside styled>
+  This is an aside - hopefully it will allow me to draw attention to points that
+  I don't want to include in the body text.
+</Aside>
+```
+
+<Aside styled>
+  This is an aside - hopefully it will allow me to draw attention to points that
+  I don't want to include in the body text.
+</Aside>
+
+## Link Previews
+
+This is a little JSX component that calls an API I created to fetch a website and
+return the open-graph data to allow me to render links to other webpages I have created nicely.
+
+For example, I wrote this Jypyter notebook on Kaggle to explain how to use Binary splits to create a baseline model for the (yes, well used) Titanic dataset:
+
+```mdx
+<LinkPreview url="https://www.kaggle.com/code/greensamiam/titanic-dataset-a-single-binary-split" />
 ```
 
 With the resulting output being as follows:
 
-<LinkPreview url="https://www.kaggle.com/competitions/titanic" />
+<LinkPreview url="https://www.kaggle.com/code/greensamiam/titanic-dataset-a-single-binary-split" />
+
+## Code blocks
+
+I can create codeblocks and highlight imporant parts for you.
+
+For example, below is a codeblock that shows some code for the LinkPreview component:
+
+- **Lines 2-3** - calls an API to fetch the data for the link preview
+- **Lines 14-16** - ensures that the component is only rendered when the data has been fetched
+- **Line 18** - renders the preview card
+
+```js showLineNumbers title="LinkPreview.tsx" {2-3,14-16,18}
+async function getPreivewData(url: string) {
+  const res = await fetch(API + `?url=${url}`);
+  const data = await res.json();
+  return data;
+}
+
+export const LinkPreview = ({ url }: { url: string }) => {
+  const [data, setData] = useState<PreviewData | null>(null);
+
+  useEffect(() => {
+    getPreivewData(url).then((data) => setData(data));
+  }, [url]);
+
+  if (!data) {
+    return null;
+  }
+
+  return <PreviewCard data={data}>;
+};
+```
+
+# Conclusion
+
+This is just a quick post to kick-start the year, but I hope it allows you to explore the technologies I've used to build this blog should you want to create a similar one.
+
+You can follow my progress here if you like:
+
+<LinkPreview url="https://github.com/ssfgreen/blog" />

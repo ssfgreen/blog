@@ -10,7 +10,7 @@ export const getStaticProps: GetStaticProps<{
   posts: ReturnType<typeof formatPostPreview>[];
 }> = async () => {
   let posts = allPosts
-    // .filter((p) => p.status === "published")
+    .filter((p) => p.status === "published")
     .map(formatPostPreview)
     .sort((a, b) =>
       compareDesc(new Date(b.publishedAt), new Date(a.publishedAt))

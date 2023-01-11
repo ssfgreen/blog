@@ -1,4 +1,4 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import cx from "clsx";
 import { FOCUS_VISIBLE_OUTLINE } from "@/styles/constants";
@@ -6,17 +6,17 @@ import Link from "next/link";
 
 const API = `/api/links/preview`;
 
-async function getPreivewData(url) {
+async function getPreivewData(url: string) {
   const res = await fetch(API + `?url=${url}`);
   const data = await res.json();
   console.log(data);
   return data;
 }
 
-export const LinkPreview = ({ url }) => {
-  const [data, setData] = React.useState(null);
+export const LinkPreview = ({ url }: { url: string }) => {
+  const [data, setData] = useState({} as any);
 
-  React.useEffect(() => {
+  useEffect(() => {
     getPreivewData(url).then((data) => setData(data));
   }, [url]);
 

@@ -59,13 +59,13 @@ export default function Home({
                 </h1>
                 <h2 className="align-middle text-lg leading-6 text-sky-100/80">
                   <span className="hidden sm:inline">
-                    Machine Learning, Full Stack Dev, Design
+                    Machine Learning, Product, Engineering & Design
                   </span>
                   <span
                     className="inline sm:hidden"
                     title="Developer Experience"
                   >
-                    ML, Dev, Design
+                    ML, Product, Dev & Design
                   </span>{" "}
                   at{" "}
                   <span className="font-medium text-sky-100/70">Turinglab</span>

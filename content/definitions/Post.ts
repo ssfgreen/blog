@@ -20,6 +20,7 @@ export const Post = defineDocumentType(() => ({
     title: { type: "string", required: true },
     publishedAt: { type: "string", required: true },
     description: { type: "string" },
+    type: { type: "string" },
     status: { type: "enum", options: ["draft", "published"], required: true },
     series: {
       type: "nested",

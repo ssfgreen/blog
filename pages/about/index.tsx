@@ -37,23 +37,22 @@ export default function About() {
         <div className="flex flex-row space-x-4">
           <p>🚀</p>
           <p>
-            I am a co-founder at{" "}
+            I am co-founder at{" "}
             <ExtLink href="https://turinglab.co.uk">Turinglab</ExtLink> where I
             build products to make coding education more engaging and effective.
-            We{"'"}ve taught over 80,000 kids to code a month in the UK and
-            Middle-East.
+            At our peak, we taught over 80,000 kids to code per month across
+            Europe and the Middle-East.
           </p>
         </div>
 
         <div className="flex flex-row space-x-4">
           <p>🎓</p>
           <p>
-            Previously I was the Director of the{" "}
+            Previously I was the Director of{" "}
             <ExtLink href="https://www.imperial.ac.uk/computing/outreach/codelab/">
               Codelab
             </ExtLink>
-            , and an MEng Education Projects Supervisor, at Imperial College
-            London.
+            , and an MEng Supervisor, at Imperial College London.
           </p>
         </div>
 
@@ -61,9 +60,9 @@ export default function About() {
           <p>🤖</p>
           <p>
             I was awarded a distinction for my MSc in Computer Science at
-            Imperial College London, where my thesis explored{" "}
+            Imperial College London, with my thesis{" "}
             <ExtLink href="/pdfs/Visualising Deep Neural Networks.pdf">
-              {'"'}Visualising weights and activations during DNN model training
+              {'"'}Visualising Deep Neural Networks
               {'"'}.
             </ExtLink>
           </p>
@@ -72,12 +71,11 @@ export default function About() {
         <div className="flex flex-row space-x-4">
           <p>🎨</p>
           <p>
-            My first degree was an MA in Architecture from the University of
-            Cambridge, where my thesis explored{" "}
+            I also hold an MA in Architecture from the University of Cambridge,
+            where my thesis explored{" "}
             <ExtLink href="/pdfs/Added Value of Quality Design.pdf">
-              {'"'}The impact of quality design{'"'}
+              The impact of quality design.
             </ExtLink>
-            .
           </p>
         </div>
 
@@ -110,8 +108,8 @@ export default function About() {
         <div className="flex flex-row space-x-4">
           <p>⚡</p>
           <p>
-            I do Data Science in Python, Pandas, PyTorch; Web Development in
-            React, Next, Typescript, Postgres; Design in Figma, Adobe; Product
+            I do data science in Python, Pandas, PyTorch; web development in
+            React, Next, Typescript, Postgres; design in Figma, Adobe; product
             in Gsuite, Gmail, Zoom.
           </p>
         </div>
@@ -130,15 +128,11 @@ export default function About() {
           <p>🏕</p>
           <p>
             I love being outside and am a passionate climber <i>(V8, 7B)</i>. I
-            {"'"}ve have climbed all over Europe and even helped a former
-            <ExtLink href="https://www.instagram.com/captaincutloose/?hl=en">
-              GB Climber
-            </ExtLink>{" "}
-            develop a coaching manual and
+            have climbed all over Europe and even helped former GB Climber,
+            Louis Parkinson, develop a coaching manual and
             <ExtLink href="https://greenjosh.com/catalyst.html">
-              mobile app
+              mobile app.
             </ExtLink>
-            .
           </p>
         </div>
       </div>

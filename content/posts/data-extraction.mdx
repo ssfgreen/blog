@@ -1,0 +1,39 @@
+---
+title: "Data Science at small EdTech startup"
+description: "Looking at how to get a 10x speedup using Python and Pands vs. data extraction in Node.js"
+publishedAt: "2023-01-09"
+status: "draft"
+---
+
+Over the last couple of days I've been writing a funding proposal for educating kids to code in Python.
+
+My company ![Turinglab](www.turinglab.com) teaches kids to code in Python. We've been doing this for over 7 years and have taught over 100,000 kids to code.
+
+We've used Python in the past to do data analysis, however we switched a few eyars ago to writing our own data extraction and analysis code in Node.js.
+
+This is primarily because we run a full JavaScript stack, with a Node.js, MongoDB backend and React, Redux frontend.
+
+For one project it made sense to adapt some database migration scripts to also also do some basic data analysis. We continued doing this for a few more projects, but it was always a bit of a hack.
+
+This week I sat down and rewrote the core data-analysis tasks we need to do in Python. I used Pandas to do the data analysis and Matplotlib to do the visualisation.
+
+The core output of this task was:
+
+- Number of students: this is the number of students who have completed at least one task in the platform during the required period
+- Number of active schools: these are the number schools with active students
+- Number of active teachers: these are the number of teachers with active students
+- Number of challenges completed
+- Number of hours students spend learning on Turinglab: which requires parsing our a tracker object (with start and end times) for work completed by each student
+  - A breakdown of the number of hours spent on Turinglab (by student) in a histogram
+
+## What we did before
+
+## How I updated it
+
+## What I learned
+
+### Notebooks for easier analysis
+
+### Batching Pandas imports
+
+## The time speed up vs. Node.js
